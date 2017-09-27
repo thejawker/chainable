@@ -19,4 +19,9 @@ abstract class TestCase extends Orchestra
     {
         Mockery::close();
     }
+
+    public function avoidTestMarkedAsRisky()
+    {
+        $this->assertTrue(true);
+    }
 }

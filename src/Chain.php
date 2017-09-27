@@ -13,7 +13,7 @@ class Chain
     public function __construct()
     {
         $pars = func_get_args();
-        $this->instance = is_object($obj=array_shift($pars))?$obj:new $obj($pars);
+        $this->instance = is_object($obj = array_shift($pars)) ? $obj : new $obj($pars);
     }
 
     /**
