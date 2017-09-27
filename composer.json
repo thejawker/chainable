@@ -1,0 +1,43 @@
+{
+  "name": "thejawker/chainable",
+  "description": "Exposes a Class that makes method chaining fluent and easy. Also exposes a Trait.",
+  "keywords": [
+    "thejawker",
+    "fluent",
+    "chaining",
+    "oop"
+  ],
+  "homepage": "https://github.com/thejawker/laravel-route-module-macro",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Bram Veerman",
+      "email": "bram.veerman@gmail.com",
+      "homepage": "https://github.com/thejawker",
+      "role": "Developer"
+    }
+  ],
+  "require": {
+    "php": ">=7.0.0"
+  },
+  "require-dev": {
+    "orchestra/testbench": "~3.5.0",
+    "phpunit/phpunit": "^6.2"
+  },
+  "autoload": {
+    "psr-4": {
+      "TheJawker\\Chainable\\": "src"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "TheJawker\\Chainable\\Test\\": "tests"
+    }
+  },
+  "scripts": {
+    "test": "vendor/bin/phpunit"
+  },
+  "config": {
+    "sort-packages": true
+  }
+}
