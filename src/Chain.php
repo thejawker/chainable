@@ -1,10 +1,25 @@
 <?php
+/**
+ * Gives the ability to chain methods as if it were written in fluent dialect.
+ * Simply wrap this Class around it and use it like modern written PHP.
+ */
 
 namespace TheJawker\Chainable;
 
 class Chain
 {
+    /**
+     * The original instance.
+     *
+     * @var mixed|null
+     */
     private $instance = null;
+
+    /**
+     * Whether the chainability functionality is disabled.
+     *
+     * @var bool
+     */
     private $escape = false;
 
     /**
@@ -12,20 +27,20 @@ class Chain
      */
     public function __construct()
     {
-        $pars = func_get_args();
-        $this->instance = is_object($obj = array_shift($pars)) ? $obj : new $obj($pars);
+        $arguments = func_get_args();
+        $this->instance = is_object($instance = array_shift($arguments)) ? $instance : new $instance($arguments);
     }
 
     /**
      * Calls the method *magically* and returns $this;
      *
      * @param $name
-     * @param $pars
+     * @param $arguments
      * @return $this
      */
-    public function __call($name, $pars)
+    public function __call($name, $arguments)
     {
-        $result = call_user_func_array([$this->instance, $name], $pars);
+        $result = call_user_func_array([$this->instance, $name], $arguments);
         return $this->escape ? $result : $this;
     }
 
