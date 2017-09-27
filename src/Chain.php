@@ -26,6 +26,11 @@ class Chain
         return $this->escape ? $result : $this;
     }
 
+    public function instance()
+    {
+        return $this->instance;
+    }
+
     public function escape()
     {
         $this->escape = true;
