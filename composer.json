@@ -32,7 +32,10 @@
   "autoload-dev": {
     "psr-4": {
       "TheJawker\\Chainable\\Test\\": "tests"
-    }
+    },
+    "files": [
+      "helpers.php"
+    ]
   },
   "scripts": {
     "test": "vendor/bin/phpunit"

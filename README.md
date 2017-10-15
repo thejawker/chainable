@@ -9,6 +9,11 @@ $someClass->someOtherMethod();
 new Chain(SomeClass::class)
     ->someMethod()
     ->someOtherMethod();
+    
+// Or even easier
+ch(SomeClass::class)
+    ->someMethod()
+    ->someOtherMethod();
 ```
 
 
@@ -67,6 +72,15 @@ public function calculate()
         ->maybeMore()
         ->instance();
 }
+```
+
+### Wanna Go Pro? 
+I've also included a convenient shortcut for those who think instantiating a `Chain` is too much work. The following will yield exactly the same result but then just with much more ease.
+```php
+ch(LegacyClass::class)
+    ->also()
+    ->works('yay!')
+    ->fuckYess();
 ```
 
 ## Testing

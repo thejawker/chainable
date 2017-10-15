@@ -70,4 +70,12 @@ class ChainableTest extends TestCase
 
         $this->assertEquals('TestClass', class_basename($class->instance()));
     }
+
+    /** @test */
+    public function a_short_cut_can_be_used_for_laravel_apps()
+    {
+        $class = ch(TestClass::class);
+
+        $this->assertEquals('Chain', class_basename($class));
+    }
 }
