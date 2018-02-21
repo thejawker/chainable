@@ -1,8 +1,4 @@
 <?php
-/**
- * Gives the ability to chain methods as if it were written in fluent dialect.
- * Simply wrap this Class around it and use it like modern written PHP.
- */
 
 namespace TheJawker\Chainable;
 

@@ -1,6 +1,6 @@
 {
   "name": "thejawker/chainable",
-  "description": "Exposes a Class that makes method chaining fluent and easy. Also exposes a Trait.",
+  "description": "Exposes a Class that makes method chaining fluent and easy.",
   "keywords": [
     "thejawker",
     "fluent",
