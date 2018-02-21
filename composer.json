@@ -27,15 +27,15 @@
   "autoload": {
     "psr-4": {
       "TheJawker\\Chainable\\": "src"
-    }
-  },
-  "autoload-dev": {
-    "psr-4": {
-      "TheJawker\\Chainable\\Test\\": "tests"
     },
     "files": [
       "helpers.php"
     ]
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "TheJawker\\Chainable\\Test\\": "tests"
+    }
   },
   "scripts": {
     "test": "vendor/bin/phpunit"
